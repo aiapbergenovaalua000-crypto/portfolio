@@ -1,0 +1,503 @@
+<!DOCTYPE html><html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Алуа-портфолио</title>
+<style>
+   
+    body{
+        font-family:arial,sans-serif;
+        background-color:rgb(233, 225, 229)
+        color#333;
+
+    }
+     header {
+      background-color: #f48fb1;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      color: white;
+      font-size: 22px;
+    }
+    .avatar{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #fce4ec;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #555;
+      max-width: 500px;
+      margin: 0 auto 15px auto;
+      line-height: 1.6;
+    }
+
+    .hero .quote {
+      font-style: italic;
+      color: #e91e8c;
+      font-size: 15px;
+      margin-top: 10px;
+    }
+
+    .hero a {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #f48fb1;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .hero a:hover {
+      background-color: #c2185b;
+    }
+
+    section {
+      padding: 40px 30px;
+    }
+
+    section h2 {
+      font-size: 24px;
+      color: #c2185b;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #f48fb1;
+      padding-bottom: 8px;
+    }
+
+   
+    #languages {
+      background-color: white;
+    }
+
+    .lang-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .lang-card {
+      background-color: #fce4ec;
+      border: 1px solid #f48fb1;
+      border-radius: 10px;
+      padding: 15px 20px;
+      width: 200px;
+    }
+
+    .lang-card h3 {
+      font-size: 16px;
+      color: #c2185b;
+      margin-bottom: 5px;
+    }
+
+    .lang-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .lang-card:hover {
+      background-color: #f8bbd0;
+    }
+
+    .bar-chart {
+      margin-top: 25px;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+
+    .bar-row span {
+      width: 100px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .bar {
+      height: 14px;
+      background-color: #f48fb1;
+      border-radius: 7px;
+    }
+
+    .bar-row p {
+      font-size: 12px;
+      color: #c2185b;
+    }
+
+    #blog {
+      background-color: #fff0f5;
+    }
+
+    .blog-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .blog-card {
+      background-color: white;
+      border: 1px solid #f8bbd0;
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+    }
+
+    .blog-card h3 {
+      font-size: 15px;
+      color: #c2185b;
+      margin-bottom: 8px;
+    }
+
+    .blog-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .blog-card a {
+      font-size: 13px;
+      color: #e91e8c;
+      text-decoration: none;
+    }
+
+    .blog-card a:hover {
+      text-decoration: underline;
+    }
+
+    .blog-card:hover {
+      border-color: #f48fb1;
+    }
+
+    #projects {
+      background-color: white;
+    }
+
+    .proj-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .proj-card {
+      background-color: #fce4ec;
+      border: 1px solid #f48fb1;
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+    }
+
+    .proj-card h3 {
+      font-size: 15px;
+      color: #c2185b;
+      margin-bottom: 6px;
+    }
+
+    .proj-card p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .proj-card .techs {
+      font-size: 12px;
+      color: #e91e8c;
+      margin-bottom: 8px;
+    }
+
+    .proj-card a {
+      font-size: 13px;
+      color: white;
+      background-color: #f48fb1;
+      padding: 5px 12px;
+      border-radius: 15px;
+      text-decoration: none;
+    }
+
+    .proj-card a:hover {
+      background-color: #c2185b;
+    }
+
+    .proj-card:hover {
+      background-color: #f8bbd0;
+    }
+    #contact {
+      background-color: #fff0f5;
+    }
+
+    .contact-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 300px;
+    }
+
+    form label {
+      font-size: 14px;
+      color: #555;
+    }
+
+    form input,
+    form textarea {
+      padding: 8px 12px;
+      border: 1px solid #f48fb1;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: Arial, sans-serif;
+      outline: none;
+      background-color: white;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #c2185b;
+    }
+
+    form textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    form button {
+      background-color: #f48fb1;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #c2185b;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 5px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #c2185b;
+      font-size: 14px;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #f48fb1;
+      text-align: center;
+      padding: 15px;
+      color: white;
+      font-size: 13px;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .lang-list,
+      .blog-list,
+      .proj-list {
+        flex-direction: column;
+      }
+
+      .lang-card,
+      .blog-card,
+      .proj-card {
+        width: 100%;
+      }
+
+      form {
+        width: 100%;
+      }
+</style>
+</head>
+<body>
+<header>
+
+    <h1>Алуа Аяпбергенова</h1>
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#language">Языки</a>
+        <a href="#blog">Блог</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+</header>
+
+<div class="hero" id="home">
+  <img src="Спокойствие.jfif" alt="Alua" class="avatar">
+  
+    <h2>Привет!Меня зовут Алуа</h2>
+    <p>
+        Я обычная ученица,которая изучает веб-разработку.Продолжаю это делать, потому что мысль о  заработке на создании сайтов-меня вдохновляет!
+    </p>
+    <p class="quote">"Маленькие шаги сегодня-болшой результат завтра"</p>
+    <a href="#projects">Посмотреть мои работы</a>
+</div>
+<section id="languages">
+  <a href="#language"></a>
+    <h2>Популярные языки программирования</h2>
+     <div class="lang-list">
+        <div class="lang-card">
+            <h3>Python</h3>
+            <p>Создан в 1991 году.Используется для ИИ,анализа данных.Применяют Google,NASA,Netflix.</p>
+            </div>
+              <div class="lang-card">
+        <h3> JavaScript</h3>
+        <p>Создан в 1995 году. Язык для веба. Используют Meta, Twitter, Airbnb.</p>
+      </div>
+      <div class="lang-card">
+        <h3> Java</h3>
+        <p>Создан в 1995 году. Для Android и корпоративных систем. Используют Amazon, LinkedIn.</p>
+      </div>
+      <div class="lang-card">
+        <h3> C++</h3>
+        <p>Создан в 1983 году. Для игр и системных программ. Используют Adobe, Unreal Engine.</p>
+      </div>
+      <div class="lang-card">
+        <h3> Swift</h3>
+        <p>Создан Apple в 2014 году. Для iOS и macOS приложений.</p>
+      </div>
+      <div class="lang-card">
+        <h3> Go</h3>
+        <p>Создан Google в 2009 году. Быстрый язык для серверов. Используют Docker, Uber.</p>
+      </div>
+      <div class="lang-card">
+        <h3> PHP</h3>
+        <p>Создан в 1994 году. Основа WordPress и миллионов сайтов. 77% сайтов используют PHP.</p>
+      </div>
+      <div class="lang-card">
+        <h3> C#</h3>
+        <p>Создан Microsoft в 2000 году. Для игр в Unity и Windows-приложений.</p>
+      </div>
+    </div>
+    
+  </section>
+  <section id="blog">
+    <a href="#blog"></a>
+    <h2>Полезные материалы</h2>
+
+    <div class="blog-list">
+      <div class="blog-card">
+        <h3> HTML и CSS — Дакетт</h3>
+        <p>Отличная книга для начинающих. Понятные объяснения и много примеров.</p>
+        <a href="https://www.litres.ru/book/dzhon-dakett/html-i-css-razrabotka-i-dizayn-veb-saytov-38272898/">Читать далее</a>
+      </div>
+      <div class="blog-card">
+        <h3> Чистый код</h3>
+        <p>Книга Роберта Мартина о том, как писать понятный и красивый код.</p>
+        <a href="https://books.yandex.kz/books/yKPFEnY4">Читать далее</a>
+      </div>
+      <div class="blog-card">
+        <h3> The Odin Project</h3>
+        <p>Бесплатный курс от новичка до разработчика. HTML, CSS, JavaScript.</p>
+        <a href="https://www.theodinproject.com/">Читать далее</a>
+      </div>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>Мои проекты</h2>
+
+    <div class="proj-list">
+      <div class="proj-card">
+        <h3> The Maze Runner</h3>
+        <p>Тематический лендинг по «Бегущему в лабиринте». Тёмный стиль с анимациями.</p>
+        <p class="techs">HTML, CSS, анимации</p>
+        <a href="file:///C:/Users/%D0%90%D0%B4%D0%BC%D0%B8%D0%BD/Desktop/capproject/mazetunner.html">Посмотреть</a>
+      </div>
+      <div class="proj-card">
+        <h3> Сайт на Tilda</h3>
+        <p>Первый полноценный сайт на платформе Tilda. Блочный редактор и секции.</p>
+        <p class="techs">Tilda</p>
+        <a href="https://aluastrangerthing.tilda.ws/minecraft">Посмотреть</a>
+      </div>
+      <div class="proj-card">
+        <h3> UI Макет в Figma</h3>
+        <p>Дизайн-макет интерфейса: цветовая палитра, шрифты и прототип.</p>
+        <p class="techs">Figma, UI/UX</p>
+        <a href="https://www.figma.com/design/qLxdbq5UuyDvQSm5Kh0gs5/итоговая-работаааааааааааааааааааа?node-id=0-1&t=I5WMdDRl1bfa1xNq-1">Посмотреть</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <a href="#contact"></a>
+    <h2>Контакты</h2>
+    <div class="contact-wrap">
+      <form onsubmit="document.getElementById('msg').style.display='block'; this.reset(); return false;">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" placeholder="Введите имя" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Введите email" required>
+
+        <label for="text">Сообщение:</label>
+        <textarea id="text" placeholder="Напишите сообщение... " required></textarea>
+
+        <button type="submit">Отправить </button>
+        <p id="msg" style="display:none; color:#c2185b; font-size:14px;">Спасибо! Скоро отвечу </p>
+      </form>
+
+      <div>
+        <p style="font-size: 15px; margin-bottom: 12px; color: #c2185b; font-weight: bold;">Мои соцсети:</p>
+        <div class="social-links">
+          <a href="https://github.com/aiapbergenovaalua000-crypto"> GitHub</a>
+          <a href="http://t.me/Allu10aa"> Telegram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p> 2025 Алуа Аяпбергенова  «Маленькие шаги сегодня — большой результат завтра»</p>
+  </footer>
+    </section>
+</body> 
